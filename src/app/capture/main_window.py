@@ -1,5 +1,5 @@
 from scapy.all import *
-from PyQt5.QtCore import QThread, pyqtSignal, QObject
+from PyQt5.QtCore import pyqtSignal, QObject
 from PyQt5.QtWidgets import QMainWindow
 
 from app.ui.Ui_test import Ui_MainWindow
