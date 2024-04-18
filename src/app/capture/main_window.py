@@ -37,4 +37,4 @@ class MainWindow(QMainWindow):
         self.ui.ShowBox.setText(bytes2str.conv(data))
 
     def start_sniff(self):
-        self.sniffer.start("", "Realtek PCIe GbE Family Controller")
+        self.sniffer.start("", "以太网")
