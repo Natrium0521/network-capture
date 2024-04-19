@@ -6,17 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>712</width>
-    <height>740</height>
+    <width>752</width>
+    <height>729</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Network Capture</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
 	font-family:微软雅黑;
-	font-size:18px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -58,7 +57,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="IfaceChoose">
         <property name="minimumSize">
          <size>
           <width>500</width>
@@ -107,7 +106,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="FilterInput">
         <property name="minimumSize">
          <size>
           <width>200</width>
@@ -117,7 +116,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="start">
+       <widget class="QPushButton" name="Start">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -130,7 +129,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="stop">
+       <widget class="QPushButton" name="Clear">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -138,7 +137,7 @@
          </size>
         </property>
         <property name="text">
-         <string>停止捕获</string>
+         <string>清空</string>
         </property>
        </widget>
       </item>
@@ -184,13 +183,48 @@
      </layout>
     </item>
     <item>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="PacketTableView">
       <property name="minimumSize">
        <size>
         <width>600</width>
         <height>150</height>
        </size>
       </property>
+      <column>
+       <property name="text">
+        <string>编号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>时间</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>源地址</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>目的地址</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>协议</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>长度</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>信息</string>
+       </property>
+      </column>
      </widget>
     </item>
     <item>
@@ -233,7 +267,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTreeView" name="treeView">
+     <widget class="QTreeView" name="PacketTreeView">
       <property name="minimumSize">
        <size>
         <width>600</width>
@@ -285,7 +319,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextBrowser" name="textBrowser">
+     <widget class="QTextBrowser" name="PacketHexView">
       <property name="minimumSize">
        <size>
         <width>600</width>
@@ -301,7 +335,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>712</width>
+     <width>752</width>
      <height>30</height>
     </rect>
    </property>

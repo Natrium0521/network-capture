@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>737</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>网络捕获</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_0">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>网卡</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="IfaceInput">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ActionBtn">
+        <property name="text">
+         <string>开始捕获</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ClearBtn">
+        <property name="text">
+         <string>清空</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>过滤</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="FilterInput"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="FilterBtn">
+        <property name="text">
+         <string>应用过滤器</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QTableWidget" name="PacketTable">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>row</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>No.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Time</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Source</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Destination</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Protocol</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Length</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Info</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item row="0" column="1">
+        <property name="text">
+         <string>111</string>
+        </property>
+       </item>
+       <item row="0" column="2">
+        <property name="text">
+         <string>0.0.0.0</string>
+        </property>
+       </item>
+       <item row="0" column="3">
+        <property name="text">
+         <string>0.0.0.0</string>
+        </property>
+       </item>
+       <item row="0" column="4">
+        <property name="text">
+         <string>TCP</string>
+        </property>
+       </item>
+       <item row="0" column="5">
+        <property name="text">
+         <string>999</string>
+        </property>
+       </item>
+       <item row="0" column="6">
+        <property name="text">
+         <string>No Info</string>
+        </property>
+       </item>
+       <item row="1" column="0">
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item row="1" column="1">
+        <property name="text">
+         <string>111</string>
+        </property>
+       </item>
+       <item row="1" column="2">
+        <property name="text">
+         <string>192.168.0.1</string>
+        </property>
+       </item>
+       <item row="1" column="3">
+        <property name="text">
+         <string>0.0.0.0</string>
+        </property>
+       </item>
+       <item row="1" column="4">
+        <property name="text">
+         <string>ICMP</string>
+        </property>
+       </item>
+       <item row="1" column="5">
+        <property name="text">
+         <string>99</string>
+        </property>
+       </item>
+       <item row="1" column="6">
+        <property name="text">
+         <string>From ... to ...</string>
+        </property>
+       </item>
+       <item row="2" column="0">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item row="2" column="1">
+        <property name="text">
+         <string>111</string>
+        </property>
+       </item>
+       <item row="2" column="2">
+        <property name="text">
+         <string>8.8.8.8</string>
+        </property>
+       </item>
+       <item row="2" column="3">
+        <property name="text">
+         <string>0.0.0.0</string>
+        </property>
+       </item>
+       <item row="2" column="4">
+        <property name="text">
+         <string>UDP</string>
+        </property>
+       </item>
+       <item row="2" column="5">
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item row="2" column="6">
+        <property name="text">
+         <string>Info</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QTreeWidget" name="PacketTree">
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+        </property>
+        <attribute name="headerVisible">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Frame</string>
+         </property>
+        </column>
+        <item>
+         <property name="text">
+          <string>新建项目</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>新建子项目</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>新建子项目</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>新建项目</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>新建项目</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>新建项目</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>新建项目</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>新建子项目</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>新建子项目</string>
+           </property>
+          </item>
+         </item>
+        </item>
+       </widget>
+       <widget class="QPlainTextEdit" name="PacketHex">
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+        </property>
+        <property name="plainText">
+         <string>38 f3 ab e7 46 a4 00 74  9c 57 01 f7 08 00 45 00 | 8...F..t .W....E.
+00 d5 1b 25 00 00 3f 11  4e 1a 72 72 72 72 0a c3 | ...%..?. N.rrrr..
+22 32 00 35 e3 b3 00 c1  56 19 4c 7d 81 80 00 01 | &quot;2.5.... V.L}....
+00 03 00 01 00 00 04 6d  73 64 6c 09 6d 69 63 72 | .......m sdl.micr
+6f 73 6f 66 74 03 63 6f  6d 00 00 1c 00 01 c0 0c | osoft.co m.......
+00 05 00 01 00 00 0a 00  00 1b 04 6d 73 64 6c 09 | ........ ...msdl.
+6d 69 63 72 6f 73 6f 66  74 06 61 6b 61 64 6e 73 | microsof t.akadns
+03 6e 65 74 00 c0 30 00  05 00 01 00 00 00 6b 00 | .net..0. ......k.
+25 12 6d 73 64 6c 2d 6d  69 63 72 6f 73 6f 66 74 | %.msdl-m icrosoft
+2d 63 6f 6d 06 61 2d 30  30 31 36 08 61 2d 6d 73 | -com.a-0 016.a-ms
+65 64 67 65 c0 46 c0 57  00 05 00 01 00 00 00 30 | edge.F.W .......0
+00 02 c0 6a c0 71 00 06  00 01 00 00 00 18 00 23 | ...j.q.. .......#
+03 6e 73 31 c0 71 06 6d  73 6e 68 73 74 c0 11 78 | .ns1.q.m snhst..x
+2b 22 e5 00 00 07 08 00  00 03 84 00 24 ea 00 00 | +&quot;...... ....$...
+</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>737</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
