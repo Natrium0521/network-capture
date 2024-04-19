@@ -6,12 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>737</width>
-    <height>609</height>
+    <width>917</width>
+    <height>728</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>网络捕获</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -111,13 +117,26 @@
       </property>
       <widget class="QTableWidget" name="PacketTable">
        <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Consolas&quot;;</string>
+        <string notr="true">font: 9pt &quot;Consolas&quot;;
+</string>
        </property>
        <attribute name="horizontalHeaderVisible">
         <bool>true</bool>
        </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
        <attribute name="verticalHeaderVisible">
         <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderMinimumSectionSize">
+        <number>25</number>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>25</number>
        </attribute>
        <row>
         <property name="text">
@@ -138,35 +157,56 @@
         <property name="text">
          <string>No.</string>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Time</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
        <column>
         <property name="text">
          <string>Source</string>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Destination</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
        <column>
         <property name="text">
          <string>Protocol</string>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Length</string>
         </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Info</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
         </property>
        </column>
        <item row="0" column="0">
@@ -369,8 +409,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>737</width>
-     <height>23</height>
+     <width>917</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
