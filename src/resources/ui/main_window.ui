@@ -49,6 +49,20 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="ActionBtn">
+        <property name="text">
+         <string>开始捕获</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ClearBtn">
+        <property name="text">
+         <string>清空</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
@@ -82,16 +96,9 @@
        <widget class="QLineEdit" name="FilterInput"/>
       </item>
       <item>
-       <widget class="QPushButton" name="ActionBtn">
+       <widget class="QPushButton" name="FilterBtn">
         <property name="text">
-         <string>开始捕获</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="ClearBtn">
-        <property name="text">
-         <string>清空</string>
+         <string>应用过滤器</string>
         </property>
        </widget>
       </item>
