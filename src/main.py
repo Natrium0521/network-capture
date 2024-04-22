@@ -8,7 +8,7 @@ def main():
     app = QApplication(sys.argv)
 
     main_app = MainWindow()
-    main_app.show()
+    main_app.showMaximized()
 
     return app.exec_()
 
